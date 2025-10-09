@@ -1,112 +1,74 @@
+<!DOCTYPE html>
 
-@keyframes texto-animado{
-	0% {
-		opacity:0.30;
-	}
-
-	50% {
-		opacity:0.70;
-	}
-	90% {
-
-		opacity:0.90;
-	}
-	100% {
-		opacity:0.40;
-	}
-
-}
-body{
-	height:100%;
-	background-color:grey;
-	background-image:url("SL_031721_41490_22.jpg");
-	 background-size: cover; /* Redimensiona para cobrir todo o elemento */
-	 background-position: center center; /* Centraliza a imagem */
-	 background-repeat: no-repeat; /* Evita que a imagem se repita */
-	 min-height: 100vh; /* Garante que o corpo ocupe toda a altura da janela  */
-
-}
+<!-- meta-dados/estilo -->
+<html lang="pt-br">
 
 
-nav{
-	height:100%;
-	position:absolute;
-	top:0;
-	left:0;
-	background-color:rgba(128, 128, 128, 0.50);
-	z-index:2;
-	height:45px;
-	width:100%;
-	
-	
+
+<head>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
 
-}
+	<link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
 
-#logo-text {
+</head>
 
-	color:yellow;
-	animation-name:texto-animado;
-	animation-duration:2s;
-	animation-iteration-count:infinite;
-	text-align:center;
-	font-size:150%;
-	font-family: 'Roboto', sans-serif;
-	
-}
+<body>
 
-#icone-contato {
-	width:30px;
-	height:35px;
-	left:50px;
-	
+	<!-- texto da marca no site -->
+	<h1 id="logo-text"> Parts Gotech </h1>
 
-}
-#icone-contato:hover {
-	opacity:50%;
-	fill:yellow;
-	
-}
+	<!-- barra de navegação do site -->
+	<nav id="nav">
 
-.link-hidden {
-	text-decoration:none;
-}
+		<!-- icone contato -->
+		<a href="https://wa.me/555196454771" target=_blank class="link-hidden">
+		<img src="whatsapp-icon-original.svg"  id="icone-contato" title="contatos">
+		</a>
+		
+		<!-- icone sobre nos -->
+		<a href="informacao.html"  class="link-hidden">
+		<img src="informacoes.svg" alt="icone-info" id="icone-contato" title="informações sobre a empresa">
+		</a>
+		
+	</nav>
 
-section {
-	color:white;
-	font-size:100%;
-	text-align:center;
-	font-family:"Roboto", sans-serif;
+	<!-- parte central -->
+	<section>
 
+  <h1>Bem-vindo ao site oficial da Parts Gotech!</h1>
 
-}
-section h1 {
-	line-height:3.1;
-}
-section p {
-	text-align:center;
-	margin-bottom:1rem;
-}
-section h2 {
-	font-size:90%;
-	line-height:3.1;
-}
+  <h2>Somos uma empresa jovem e inovadora que ira mudar como pessoas recebem manutenção em dispositivos móveis.</h2>
+  <p>Com sedes em Tramandaí e Porto Alegre, atendemos clientes em ambas as cidades com agilidade e conveniência.</p>
+
+  <h3>Por que contratar nossos serviços?</h3>
+  <p>Praticidade! Em vez de se deslocar até uma loja física,</p>
+  	<p>nós vamos até você. Resolva seu problema sem precisar sair de casa.</p>
+
+  <h4>Como solicitar nosso serviço?</h4>
+  <p>Atendemos 24 horas via WhatsApp. Vamos até sua residência,</p>
+
+  <p>realizamos o orçamento e fornecemos um prazo estimado para a manutenção do seu dispositivo.</p>
+
+  <p>O que está esperando? Contate-nos agora mesmo: <a href="https://wa.me/555196454771">Clique aqui para falar conosco</a></p>
+
+</section>
 
 
-#footer {
-	text-align: center;
-	height: 50px;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: rgba(255, 255, 153, 1);
-  font-size: 0.9rem;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: auto; /* Empurra o rodapé para o final */
-  100vh
-}
+	<!-- parte vertical esquerda -->
 
-#footer p {
-  margin: 0;
-}
+
+	<aside>		
+
+	</aside>
+
+
+
+</body>
+
+<footer id="footer">
+  <p>&copy; 2025 Parts Gotech. Todos os direitos reservados.</p>
+</footer>
+
+</html>
