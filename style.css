@@ -1,112 +1,172 @@
+     @keyframes texto-animado{
+            0% {
+                opacity:0.30;
+            }
 
-@keyframes texto-animado{
-	0% {
-		opacity:0.30;
-	}
+            50% {
+                opacity:0.70;
+            }
+            90% {
 
-	50% {
-		opacity:0.70;
-	}
-	90% {
-
-		opacity:0.90;
-	}
-	100% {
-		opacity:0.40;
-	}
-
-}
-body{
-	height:100%;
-	background-color:grey;
-	background-image:url("SL_031721_41490_22.jpg");
-	 background-size: cover; /* Redimensiona para cobrir todo o elemento */
-	 background-position: center center; /* Centraliza a imagem */
-	 background-repeat: no-repeat; /* Evita que a imagem se repita */
-	 min-height: 100vh; /* Garante que o corpo ocupe toda a altura da janela  */
-
-}
-
-
-nav{
-	height:100%;
-	position:absolute;
-	top:0;
-	left:0;
-	background-color:rgba(128, 128, 128, 0.50);
-	z-index:2;
-	height:45px;
-	width:100%;
-	
-	
+                opacity:0.90;
+            }
+            100% {
+                opacity:0.40;
+            }
+        }
+        body{
+            height:100%;
+            background-color:grey;
+            background-image:url("https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+            background-size: cover; /* Redimensiona para cobrir todo o elemento */
+            background-position: center center; /* Centraliza a imagem */
+            background-repeat: no-repeat; /* Evita que a imagem se repita */
+            min-height: 100vh; /* Garante que o corpo ocupe toda a altura da janela  */
+            margin: 0;
+            padding: 45px 0 0 0; /* Para compensar a nav fixa */
+            display: flex;
+            flex-direction: column;
+        }
 
 
-}
+        nav{
+            height:100%;
+            position:absolute;
+            top:0;
+            left:0;
+            background-color:rgba(128, 128, 128, 0.50);
+            z-index:2;
+            height:45px;
+            width:100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-#logo-text {
+        #logo-text {
+            color:yellow;
+            animation-name:texto-animado;
+            animation-duration:2s;
+            animation-iteration-count:infinite;
+            text-align:center;
+            font-size:150%;
+            font-family: 'Roboto', sans-serif;
+        }
 
-	color:yellow;
-	animation-name:texto-animado;
-	animation-duration:2s;
-	animation-iteration-count:infinite;
-	text-align:center;
-	font-size:150%;
-	font-family: 'Roboto', sans-serif;
-	
-}
+        #icone-contato {
+            width:30px;
+            height:35px;
+            left:50px;
+        }
+        #icone-contato:hover {
+            opacity:50%;
+            fill:yellow;
+        }
 
-#icone-contato {
-	width:30px;
-	height:35px;
-	left:50px;
-	
+        .link-hidden {
+            text-decoration:none;
+        }
 
-}
-#icone-contato:hover {
-	opacity:50%;
-	fill:yellow;
-	
-}
+        section {
+            color:white;
+            font-size:100%;
+            text-align:center;
+            font-family:"Roboto", sans-serif;
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        section h1 {
+            line-height:3.1;
+        }
+        section p {
+            text-align:center;
+            margin-bottom:1rem;
+        }
+        section h2 {
+            font-size:90%;
+            line-height:3.1;
+        }
 
-.link-hidden {
-	text-decoration:none;
-}
+        #footer {
+            text-align: center;
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: rgba(255, 255, 153, 1);
+            font-size: 0.9rem;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: auto; /* Empurra o rodapé para o final */
+        }
 
-section {
-	color:white;
-	font-size:100%;
-	text-align:center;
-	font-family:"Roboto", sans-serif;
+        #footer p {
+            margin: 0;
+        }
 
-
-}
-section h1 {
-	line-height:3.1;
-}
-section p {
-	text-align:center;
-	margin-bottom:1rem;
-}
-section h2 {
-	font-size:90%;
-	line-height:3.1;
-}
-
-
-#footer {
-	text-align: center;
-	height: 50px;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: rgba(255, 255, 153, 1);
-  font-size: 0.9rem;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: auto; /* Empurra o rodapé para o final */
-  100vh
-}
-
-#footer p {
-  margin: 0;
-}
+        /* MEDIA QUERIES PARA RESPONSIVIDADE */
+        
+        /* Tablets */
+        @media (max-width: 768px) {
+            #logo-text {
+                font-size: 130%;
+            }
+            
+            section h1 {
+                line-height: 2.5;
+                font-size: 1.8rem;
+            }
+            
+            section h2 {
+                line-height: 2.5;
+                font-size: 1.4rem;
+            }
+            
+            section p {
+                font-size: 95%;
+            }
+        }
+        
+        /* Celulares */
+        @media (max-width: 480px) {
+            #logo-text {
+                font-size: 120%;
+            }
+            
+            section h1 {
+                line-height: 2;
+                font-size: 1.5rem;
+            }
+            
+            section h2 {
+                line-height: 2;
+                font-size: 1.2rem;
+            }
+            
+            section {
+                padding: 15px;
+            }
+            
+            #footer {
+                font-size: 0.8rem;
+            }
+        }
+        
+        /* Celulares muito pequenos */
+        @media (max-width: 320px) {
+            #logo-text {
+                font-size: 110%;
+            }
+            
+            section h1 {
+                font-size: 1.3rem;
+            }
+            
+            section h2 {
+                font-size: 1rem;
+            }
+        }
